@@ -111,6 +111,7 @@ docs.ray.io/
 # book and other source folders
 data/
 openwebtext/
+hf_fineweb/
 
 model-01.pkl
 openweb-text-hf.py

@@ -27,7 +27,7 @@ n_layer = 8
 dropout = 0.2
 
 chars = ""
-with open('openwebtext/vocab.txt', 'r', encoding='utf-8') as f:
+with open('HF_fineweb/vocab.txt', 'r', encoding='utf-8') as f:
     text = f.read()
     chars = sorted(list(set(text)))
     
@@ -41,7 +41,7 @@ decode = lambda l: ''.join([int_to_string[i] for i in l])
 #data = torch.tensor(encode(text), dtype=torch.long)
 
 def get_random_chunk(split):
-    filename = "openwebtext/train_split.txt" if split == "train" else "openwebtext/val_split.txt"
+    filename = "hf_fineweb/output_train.txt" if split == "train" else "hf_fineweb/output_val.txt"
     with open(filename, 'rb') as f:
         with mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) as mm:
             # Determine filesize and starting position to read data

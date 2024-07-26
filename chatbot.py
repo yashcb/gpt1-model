@@ -27,7 +27,7 @@ n_layer = 8
 dropout = 0.2
 
 chars = ""
-with open('openwebtext/vocab.txt', 'r', encoding='utf-8') as f:
+with open('hf_fineweb/vocab.txt', 'r', encoding='utf-8') as f:
     text = f.read()
     chars = sorted(list(set(text)))
     
